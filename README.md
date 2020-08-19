@@ -1,10 +1,16 @@
 ### Hey everyone, I'm Mar Mejia, AKA mechazod came from HeartStone game.
 
+Everyday I push myself to do discovering new possible oportunities to work on. I loved to watch cooking and planting techniques on Youtube.
+I spend my time to take care of my wife and children and making them happy.
+
+- 🔭 I’m currently working on [nixplay.com](https://www.nixplay.com)
+- 🌱 I’m currently learning programming and life
+- ⚡ [LinkedIn](https://www.linkedin.com/in/mar-mejia-b3b160a0/)
+
+
 <!--
 **mechazod/mechazod** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Everyday I push myself to do discovering new possible oportunities to work on. I loved to watch cooking and planting techniques on Youtube.
-I spend my time to take care of my wife and children and making them happy.
 
 Here are some ideas to get you started:
 
