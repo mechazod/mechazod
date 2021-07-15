@@ -23,10 +23,6 @@ Here are some ideas to get you started:
 -->
 
 
-:musical_note: I'm currently listening:
-
-[![Spotify](https://ldhnam.vercel.app/api/spotify)](https://open.spotify.com/user/12164295785)
-
 :bar_chart: GitHub Stats
 
 ![Nam Le's Github Stats](https://github-readme-stats.vercel.app/api?username=mechazod&show_icons=true&title_color=19F9D8&icon_color=19F9D8&bg_color=002B36&text_color=FFFFFF)
