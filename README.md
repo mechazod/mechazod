@@ -1,6 +1,6 @@
 ### Hey everyone, I'm Mar Mejia
 
-Everyday I push myself to do discovering new possible oportunities to work on.
+Everyday I push myself to do discovering new possible opportunities to work on.
 
 - 🌱 I’m currently learning old build tools
 - ⚡ [LinkedIn](https://www.linkedin.com/in/mar-mejia-b3b160a0/)
