@@ -4,6 +4,7 @@ Looking for new ideas and opportunities.
 
 - 🌱 Hire me, mejiamariano8.08@gmail.com, +639972507164
 - ⚡ [LinkedIn](https://www.linkedin.com/in/mar-mejia-b3b160a0/)
+- ⚡ [ClashCode](https://www.codingame.com/profile/24d5cbbb7feda082bee70940acd867428398205)
 
 
 :bar_chart: GitHub Stats
