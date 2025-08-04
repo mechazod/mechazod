@@ -1,6 +1,6 @@
 ### Hey everyone, I'm Mar Mejia
 
-Looking for new ideas and opportunities.
+Looking for side hustle mini project for #Swift #iOS. Referrals are hightly appreaciated. 
 
 - 🌱 Contact me at mejiamariano8.08@gmail.com, +639972507164
 - ⚡ [LinkedIn](https://www.linkedin.com/in/mar-mejia-b3b160a0/)
