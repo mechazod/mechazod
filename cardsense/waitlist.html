@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardSense | Join the Beta Program</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #CC1F1F;
+            --primary-light: #E53535;
+            --primary-dark: #A81818;
+            --primary-glow: rgba(204, 31, 31, 0.18);
+            --primary-soft: rgba(204, 31, 31, 0.08);
+            --secondary: #F5A623;
+            --bg: #FAF8F5;
+            --bg-mid: #F2EEE8;
+            --bg-card: #FFFFFF;
+            --text: #1A1410;
+            --text-mid: #4A3F35;
+            --text-dim: #9C8E82;
+            --border: rgba(0, 0, 0, 0.08);
+            --border-accent: rgba(204, 31, 31, 0.25);
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.10);
+            --shadow-red: 0 6px 24px rgba(204, 31, 31, 0.22);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 50% at 90% 10%, rgba(204, 31, 31, 0.04) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 60% at 10% 80%, rgba(245, 166, 35, 0.05) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ─── Header ─── */
+        header {
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: -0.4px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-red);
+            flex-shrink: 0;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .beta-chip {
+            background: var(--primary-soft);
+            color: var(--primary);
+            border: 1px solid var(--border-accent);
+            padding: 3px 11px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: #fff;
+            padding: 11px 26px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+            display: inline-block;
+            box-shadow: var(--shadow-red);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: var(--primary-light);
+            box-shadow: 0 10px 28px rgba(204, 31, 31, 0.32);
+        }
+
+        /* ─── Hero ─── */
+        .hero {
+            text-align: center;
+            padding: 90px 0 72px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-soft);
+            border: 1px solid var(--border-accent);
+            color: var(--primary);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.7);
+            }
+        }
+
+        h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+            color: var(--text);
+            animation: fadeUp 0.6s 0.1s ease both;
+        }
+
+        /* ─── Shimmer on "Personal Finance" ─── */
+        .shimmer-text {
+            display: inline;
+            background: linear-gradient(105deg,
+                    var(--primary-dark) 0%,
+                    var(--primary-dark) 28%,
+                    #FF8A80 42%,
+                    #FFD54F 50%,
+                    #FF8A80 58%,
+                    var(--primary-dark) 72%,
+                    var(--primary-dark) 100%);
+            background-size: 260% 100%;
+            background-position: 200% center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerOnce 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s 1 forwards;
+        }
+
+        @keyframes shimmerOnce {
+            from {
+                background-position: 200% center;
+            }
+
+            to {
+                background-position: -60% center;
+            }
+        }
+
+        @keyframes shimmerLoop {
+
+            0%,
+            70%,
+            100% {
+                background-position: 200% center;
+            }
+
+            35% {
+                background-position: -60% center;
+            }
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 580px;
+            margin: 0 auto 40px;
+            animation: fadeUp 0.6s 0.2s ease both;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeUp 0.6s 0.3s ease both;
+        }
+
+        .cta-button-large {
+            background: var(--primary);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+            display: inline-block;
+            box-shadow: var(--shadow-red);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            background: var(--primary-light);
+            box-shadow: 0 12px 32px rgba(204, 31, 31, 0.36);
+        }
+
+        .slots-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            padding: 14px 24px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .slots-note strong {
+            color: var(--primary);
+        }
+
+        /* ─── Stats bar ─── */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            margin: 56px 0;
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            animation: fadeUp 0.6s 0.4s ease both;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 28px 36px;
+            flex: 1;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-value {
+            font-family: 'Sora', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            margin-top: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        /* ─── Mission Section ─── */
+        .mission-section {
+            padding: 80px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            border: 1px solid var(--border-accent);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .section-title p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .mission-card {
+            background: var(--bg-card);
+            padding: 28px 24px 42px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mission-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .mission-card:hover {
+            border-color: var(--border-accent);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        .mission-card:hover::after {
+            opacity: 1;
+        }
+
+        .day-badge {
+            display: inline-block;
+            background: var(--primary-soft);
+            color: var(--primary);
+            padding: 4px 13px;
+            border-radius: 8px;
+            font-size: 0.73rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.03em;
+            border: 1px solid var(--border-accent);
+        }
+
+        .mission-card h3 {
+            font-family: 'Sora', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .mission-card p {
+            font-size: 0.875rem;
+            color: var(--text-dim);
+            line-height: 1.65;
+        }
+
+        .card-number {
+            position: absolute;
+            bottom: 10px;
+            right: 18px;
+            font-family: 'Sora', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(204, 31, 31, 0.06);
+            line-height: 1;
+            user-select: none;
+        }
+
+        /* ─── Sign Up Section ─── */
+        .signup-section {
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+
+        .glass-panel {
+            background: var(--bg-card);
+            padding: 52px 56px;
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            max-width: 540px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary-light), var(--secondary));
+        }
+
+        .glass-panel h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .glass-panel .subtitle {
+            margin-bottom: 30px;
+            color: var(--text-dim);
+            font-size: 0.92rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            pointer-events: none;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 14px 20px 14px 46px;
+            border-radius: 50px;
+            border: 1.5px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 0.95rem;
+            font-family: 'DM Sans', sans-serif;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            outline: none;
+        }
+
+        input[type="email"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-glow);
+        }
+
+        input[type="email"]::placeholder {
+            color: var(--text-dim);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+            box-shadow: var(--shadow-red);
+            margin-top: 4px;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-light);
+            box-shadow: 0 10px 28px rgba(204, 31, 31, 0.32);
+            transform: translateY(-2px);
+        }
+
+        .fine-print {
+            font-size: 0.77rem;
+            margin-top: 18px;
+            color: var(--text-dim);
+        }
+
+        /* ─── Form States ─── */
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .btn-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-msg {
+            display: none;
+            background: rgba(204, 31, 31, 0.08);
+            border: 1px solid var(--border-accent);
+            color: var(--primary);
+            font-size: 0.82rem;
+            padding: 10px 16px;
+            border-radius: 12px;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        /* Success state */
+        .success-panel {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .success-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(204, 31, 31, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+        }
+
+        .success-panel h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .success-panel p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            max-width: 320px;
+        }
+
+        .success-email-badge {
+            background: var(--primary-soft);
+            border: 1px solid var(--border-accent);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.84rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ─── Animations ─── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 900px) {
+            .timeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat {
+                padding: 22px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.4rem;
+                letter-spacing: -1px;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .glass-panel {
+                padding: 36px 24px;
+            }
+
+            .stats-bar {
+                flex-wrap: wrap;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="https://parkspacer.com/cardsense/cardsense2.png" alt="CardSense icon">
+                </div>
+                CardSense
+                <span class="beta-chip">Beta</span>
+            </a>
+            <a href="#join" class="cta-button">Become a Tester</a>
+        </header>
+
+        <section class="hero">
+            <div class="hero-eyebrow">20 Slots Only · Closed Testing</div>
+            <h1>
+                Shape the Future of<br>
+                <span class="shimmer-text">Personal Finance</span>
+            </h1>
+            <p>Help us build the smartest credit card companion. We're looking for 20 dedicated beta testers to join our
+                14-day closed testing program.</p>
+            <div class="hero-cta-group">
+                <a href="#join" class="cta-button-large">Apply to the Beta List</a>
+                <span class="slots-note">🎯 <strong>20 slots</strong> available · Free to join</span>
+            </div>
+        </section>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value">14</div>
+                <div class="stat-label">Day Program</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">20</div>
+                <div class="stat-label">Tester Slots</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">24h</div>
+                <div class="stat-label">Invite Turnaround</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">🇵🇭</div>
+                <div class="stat-label">Built for PH</div>
+            </div>
+        </div>
+
+        <section class="mission-section">
+            <div class="section-title">
+                <div class="section-label">Your Mission</div>
+                <h2>The 14-Day Tester Mission</h2>
+                <p>Google requires real engagement. Here is what we need from you.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="mission-card">
+                    <div class="day-badge">Day 1–2</div>
+                    <h3>The Setup</h3>
+                    <p>Install the app via the Play Store link provided in your email. Complete your profile and link
+                        your first card product.</p>
+                    <div class="card-number">1</div>
+                </div>
+                <div class="mission-card">
+                    <div class="day-badge">Day 3–5</div>
+                    <h3>Data Sync</h3>
+                    <p>Upload a sample PDF Statement of Account (SOA). Check if your transactions were parsed correctly.
+                    </p>
+                    <div class="card-number">2</div>
+                </div>
+                <div class="mission-card">
+                    <div class="day-badge">Day 6–10</div>
+                    <h3>Daily Pulse</h3>
+                    <p>Open the app for 1 minute daily. Explore current promos and check your "Budget Health"
+                        indicators.</p>
+                    <div class="card-number">3</div>
+                </div>
+                <div class="mission-card">
+                    <div class="day-badge">Day 11–14</div>
+                    <h3>The Feedback</h3>
+                    <p>Submit a feedback report via the in-app button. Tell us one thing you love and one thing that's
+                        broken.</p>
+                    <div class="card-number">4</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="signup-section" id="join">
+            <div class="glass-panel">
+                <h2>Join the Beta List</h2>
+                <p class="subtitle">Enter the email address associated with your Google Play account. We'll send you an
+                    invite within 24 hours.</p>
+                <!-- Form -->
+                <form id="waitlist-form" action="#" method="POST" novalidate>
+                    <div class="input-wrapper">
+                        <span class="input-icon">✉️</span>
+                        <input type="email" id="email-input" placeholder="Enter your Google Play email" required
+                            autocomplete="email">
+                    </div>
+                    <div class="error-msg" id="error-msg"></div>
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span class="btn-inner">
+                            <span class="spinner" id="spinner"></span>
+                            <span id="btn-label">Send My Invite →</span>
+                        </span>
+                    </button>
+                </form>
+                <p class="fine-print" id="fine-print">By joining, you agree to engage with the app for at least 14 days.
+                </p>
+
+                <!-- Success State -->
+                <div class="success-panel" id="success-panel">
+                    <div class="success-icon">🎉</div>
+                    <h3>You're on the list!</h3>
+                    <p>Check your inbox within 24 hours for your Play Store invite link.</p>
+                    <div class="success-email-badge" id="success-email"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 CardSense · Built with love for the Philippine financial community</p>
+            <p style="margin-top: 8px;">
+                <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms &amp; Conditions</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://kkdagpkvxoagngkkgkri.supabase.co​/rest/v1/waitlist';
+        const SUPABASE_KEY = 'sb_publishable_uj_Bu0IVuo1yjD4IAgCOfA_XFNmq0Sj';
+        const LS_SUCCESS = 'cardsense_waitlist_success';
+        const LS_EMAIL = 'cardsense_waitlist_email';
+
+        const form = document.getElementById('waitlist-form');
+        const emailInput = document.getElementById('email-input');
+        const submitBtn = document.getElementById('submit-btn');
+        const spinner = document.getElementById('spinner');
+        const btnLabel = document.getElementById('btn-label');
+        const errorMsg = document.getElementById('error-msg');
+        const successPanel = document.getElementById('success-panel');
+        const successEmail = document.getElementById('success-email');
+        const finePrint = document.getElementById('fine-print');
+
+        // ── Restore success state if already submitted ──
+        if (localStorage.getItem(LS_SUCCESS) === 'true') {
+            showSuccess(localStorage.getItem(LS_EMAIL) || '');
+        }
+
+        // ── Form submit ──
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            clearError();
+
+            const cleanEmail = emailInput.value.trim().toLowerCase();
+
+            if (!isValidEmail(cleanEmail)) {
+                showError('Please enter a valid email address.');
+                return;
+            }
+
+            setLoading(true);
+
+            setTimeout(() => {
+                fetch(SUPABASE_URL, {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_KEY,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({ email: cleanEmail })
+                })
+                    .then(res => {
+                        if (!res.ok && res.status !== 201) {
+                            // 409 = duplicate email — treat gracefully
+                            if (res.status === 409) {
+                                setLoading(false);
+                                showSuccess(cleanEmail, true);
+                            } else {
+                                throw new Error('Server responded with ' + res.status);
+                            }
+                        } else {
+                            setLoading(false);
+                            showSuccess(cleanEmail);
+                            localStorage.setItem(LS_SUCCESS, 'true');
+                            localStorage.setItem(LS_EMAIL, cleanEmail);
+                        }
+                    })
+                    .catch(err => {
+                        setLoading(false);
+                        showError('Something went wrong. Please try again.');
+                        console.error('Submission error:', err);
+                    });
+            }, 1200);
+        });
+
+        // ── Helpers ──
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function setLoading(state) {
+            submitBtn.disabled = state;
+            spinner.style.display = state ? 'block' : 'none';
+            btnLabel.textContent = state ? 'Sending…' : 'Send My Invite →';
+        }
+
+        function showError(msg) {
+            errorMsg.textContent = '⚠️ ' + msg;
+            errorMsg.style.display = 'block';
+        }
+
+        function clearError() {
+            errorMsg.style.display = 'none';
+            errorMsg.textContent = '';
+        }
+
+        function showSuccess(email, isDuplicate) {
+            form.style.display = 'none';
+            finePrint.style.display = 'none';
+            successPanel.style.display = 'flex';
+            successEmail.textContent = email;
+            if (isDuplicate) {
+                successPanel.querySelector('p').textContent =
+                    'This email is already on the list. We\'ll send your invite within 24 hours.';
+            }
+        }
+    </script>
+</body>
+
+</html>
