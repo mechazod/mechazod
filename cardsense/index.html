@@ -575,6 +575,257 @@
       color: var(--muted);
     }
 
+    /* ── PRICING ── */
+    .pricing-section {
+      padding: 60px 40px 70px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .pricing-header h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .pricing-header p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 760px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    .price-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1.5px solid var(--red-border);
+      border-radius: 20px;
+      padding: 28px 26px;
+    }
+
+    .price-card-premium {
+      border-color: var(--red);
+      box-shadow: 0 10px 36px rgba(204, 31, 31, 0.14);
+    }
+
+    .price-card-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--red);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    .price-card-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .price-card-premium .price-card-name {
+      color: var(--red);
+    }
+
+    .price-card-price {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .price-card-price span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-left: 2px;
+    }
+
+    .price-card-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .price-feat-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 26px;
+      flex: 1;
+    }
+
+    .price-feat-list li {
+      font-size: 0.85rem;
+      color: var(--ink);
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.45;
+    }
+
+    .price-feat-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .price-feat-list li.price-feat-no {
+      color: var(--muted);
+    }
+
+    .price-feat-list li.price-feat-no::before {
+      content: "✗";
+      color: var(--muted);
+    }
+
+    .price-cta {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    .price-cta-ghost {
+      background: var(--off);
+      color: var(--ink);
+      border: 1.5px solid var(--red-border);
+    }
+
+    .price-cta-ghost:hover {
+      background: white;
+      border-color: var(--red);
+    }
+
+    .price-cta-solid {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 6px 20px rgba(204, 31, 31, 0.28);
+    }
+
+    .price-cta-solid:hover {
+      background: var(--red-light);
+      transform: translateY(-2px);
+    }
+
+    .billing-toggle {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 36px;
+      background: white;
+      border: 1.5px solid var(--red-border);
+      border-radius: 100px;
+      padding: 4px;
+      width: fit-content;
+      gap: 4px;
+    }
+
+    .billing-toggle button {
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      padding: 8px 18px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .billing-toggle button.active {
+      background: var(--red);
+      color: white;
+    }
+
+    .billing-save-chip {
+      background: var(--green-bg);
+      color: var(--green);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+
+    .billing-toggle button.active .billing-save-chip {
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
+    }
+
+    .price-card-period {
+      display: none;
+    }
+
+    .price-card-period.active {
+      display: block;
+    }
+
+    .price-card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+      margin-bottom: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--red-border);
+    }
+
+    .price-card-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.78rem;
+    }
+
+    .price-card-meta-row span:first-child {
+      color: var(--muted);
+    }
+
+    .price-card-meta-row span:last-child {
+      color: var(--ink);
+      font-weight: 700;
+      text-align: right;
+    }
+
     /* ── PRIVACY CALLOUT ── */
     .privacy-section {
       background: #0F6E56;
@@ -750,6 +1001,16 @@
         gap: 14px;
       }
 
+      .pricing-section {
+        padding: 40px 24px 50px;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        max-width: 380px;
+      }
+
       .screenshots-header {
         padding: 0 24px;
       }
@@ -829,11 +1090,6 @@
         Built for Filipino cardholders.
       </p>
 
-      <div class="price-badge reveal d2">
-        <strong>₱49</strong>
-        <span>one-time · no subscription · full access forever</span>
-      </div>
-
       <div class="cta-box reveal d3">
         <p class="cta-label">Download on Google Play</p>
 
@@ -883,6 +1139,99 @@
       </div>
       <div class="phone phone-r">
         <img src="https://parkspacer.com/cardsense/card4_yoy_page.png" alt="Annual Summary YoY">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRICING ── -->
+  <section class="pricing-section">
+    <div class="pricing-header reveal">
+      <h2>Simple, transparent pricing</h2>
+      <p>Starts at ₱49. Upgrade anytime for the ultimate financial intelligence tools.</p>
+    </div>
+
+    <div class="billing-toggle reveal">
+      <button type="button" class="active" data-period="monthly" onclick="setBillingPeriod('monthly')">
+        Monthly
+      </button>
+      <button type="button" data-period="annual" onclick="setBillingPeriod('annual')">
+        Annual <span class="billing-save-chip">Save 16%</span>
+      </button>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card reveal d1">
+        <div class="price-card-name">CardSense Lite</div>
+        <div class="price-card-price">₱49</div>
+        <div class="price-card-sub">One-time download. No subscription needed.</div>
+        <ul class="price-feat-list">
+          <li>Manage up to 4 credit cards</li>
+          <li>Standard flat card designs</li>
+          <li>Transactions, SOA import &amp; dashboard</li>
+          <li class="price-feat-no">Advanced analytics &amp; planning</li>
+          <li class="price-feat-no">AI card recommendations</li>
+        </ul>
+        <a class="price-cta price-cta-ghost" href="https://play.google.com/store/apps/details?id=com.cardsense.mejia"
+          target="_blank" rel="noopener">Get started</a>
+      </div>
+
+      <div class="price-card price-card-premium reveal d2">
+        <div class="price-card-badge">Most popular</div>
+        <div class="price-card-name">CardSense Premium</div>
+
+        <div class="price-card-period active" data-period="monthly">
+          <div class="price-card-price">₱299<span>/month</span></div>
+          <div class="price-card-sub">Billed monthly. Cancel anytime.</div>
+        </div>
+        <div class="price-card-period" data-period="annual">
+          <div class="price-card-price">₱2,999<span>/year</span></div>
+          <div class="price-card-sub">Billed once a year — 2 months free vs. monthly.</div>
+        </div>
+
+        <ul class="price-feat-list">
+          <li>Unlimited cards, no cap</li>
+          <li>AI-powered card recommendations</li>
+          <li>Financial Health — DTI &amp; credit utilization</li>
+          <li>Cashflow forecasting</li>
+          <li>Income, budget &amp; cash advance tracking</li>
+          <li>Subscription audit</li>
+          <li>Nearby deals on your dashboard</li>
+          <li>Animated 3D premium card designs</li>
+        </ul>
+
+        <div class="price-card-meta">
+          <div class="price-card-period active" data-period="monthly">
+            <div class="price-card-meta-row">
+              <span>Savings</span>
+              <span>None — standard rate</span>
+            </div>
+            <div class="price-card-meta-row">
+              <span>Payment grace period</span>
+              <span>3 days</span>
+            </div>
+            <div class="price-card-meta-row">
+              <span>Priority support</span>
+              <span>Not included</span>
+            </div>
+          </div>
+          <div class="price-card-period" data-period="annual">
+            <div class="price-card-meta-row">
+              <span>Savings</span>
+              <span>~16% (2 months free)</span>
+            </div>
+            <div class="price-card-meta-row">
+              <span>Payment grace period</span>
+              <span>14 days</span>
+            </div>
+            <div class="price-card-meta-row">
+              <span>Priority support</span>
+              <span>Included</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="price-cta price-cta-solid" href="https://play.google.com/store/apps/details?id=com.cardsense.mejia"
+          target="_blank" rel="noopener">Go Premium</a>
       </div>
     </div>
   </section>
@@ -1025,6 +1374,17 @@
         Conditions</a></span>
     <span class="footer-copy">© 2026 CardSense</span>
   </footer>
+
+  <script>
+    function setBillingPeriod(period) {
+      document.querySelectorAll('.billing-toggle button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.period === period);
+      });
+      document.querySelectorAll('.price-card-period').forEach(el => {
+        el.classList.toggle('active', el.dataset.period === period);
+      });
+    }
+  </script>
 
   <script>
     const obs = new IntersectionObserver(entries => {
