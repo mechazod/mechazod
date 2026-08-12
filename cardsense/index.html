@@ -604,9 +604,9 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
-      max-width: 760px;
+      max-width: 1040px;
       margin: 0 auto;
       align-items: stretch;
     }
@@ -1147,7 +1147,7 @@
   <section class="pricing-section">
     <div class="pricing-header reveal">
       <h2>Simple, transparent pricing</h2>
-      <p>Starts at ₱49. Upgrade anytime for the ultimate financial intelligence tools.</p>
+      <p>Start free. Upgrade anytime for smarter insights and the ultimate financial intelligence tools.</p>
     </div>
 
     <div class="billing-toggle reveal">
@@ -1161,12 +1161,12 @@
 
     <div class="pricing-grid">
       <div class="price-card reveal d1">
-        <div class="price-card-name">CardSense Lite</div>
-        <div class="price-card-price">₱49</div>
-        <div class="price-card-sub">One-time download. No subscription needed.</div>
+        <div class="price-card-name">CardSense Free</div>
+        <div class="price-card-price">₱0<span>/forever</span></div>
+        <div class="price-card-sub">No subscription needed. Get started right away.</div>
         <ul class="price-feat-list">
-          <li>Manage up to 4 credit cards</li>
-          <li>Standard flat card designs</li>
+          <li>Manage 1 credit card</li>
+          <li>Standard flat card design</li>
           <li>Transactions, SOA import &amp; dashboard</li>
           <li class="price-feat-no">Advanced analytics &amp; planning</li>
           <li class="price-feat-no">AI card recommendations</li>
@@ -1175,7 +1175,47 @@
           target="_blank" rel="noopener">Get started</a>
       </div>
 
-      <div class="price-card price-card-premium reveal d2">
+      <div class="price-card reveal d2">
+        <div class="price-card-name">CardSense Basic</div>
+
+        <div class="price-card-period active" data-period="monthly">
+          <div class="price-card-price">₱49<span>/month</span></div>
+          <div class="price-card-sub">Billed monthly. Cancel anytime.</div>
+        </div>
+        <div class="price-card-period" data-period="annual">
+          <div class="price-card-price">₱490<span>/year</span></div>
+          <div class="price-card-sub">Billed once a year — 2 months free vs. monthly.</div>
+        </div>
+
+        <ul class="price-feat-list">
+          <li>Manage up to 4 credit cards</li>
+          <li>Standard flat card designs</li>
+          <li>Transactions, SOA import &amp; dashboard</li>
+          <li>Due date &amp; annual fee reminders</li>
+          <li class="price-feat-no">Advanced analytics &amp; planning</li>
+          <li class="price-feat-no">AI card recommendations</li>
+        </ul>
+
+        <div class="price-card-meta">
+          <div class="price-card-period active" data-period="monthly">
+            <div class="price-card-meta-row">
+              <span>Savings</span>
+              <span>None — standard rate</span>
+            </div>
+          </div>
+          <div class="price-card-period" data-period="annual">
+            <div class="price-card-meta-row">
+              <span>Savings</span>
+              <span>~16% (2 months free)</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="price-cta price-cta-ghost" href="https://play.google.com/store/apps/details?id=com.cardsense.mejia"
+          target="_blank" rel="noopener">Get started</a>
+      </div>
+
+      <div class="price-card price-card-premium reveal d3">
         <div class="price-card-badge">Most popular</div>
         <div class="price-card-name">CardSense Premium</div>
 
