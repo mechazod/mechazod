@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referral Program — CardSense</title>
+  <meta name="description"
+    content="Invite friends to CardSense, unlock free Premium months, and learn how our referral program keeps things fair with built-in fraud prevention.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --red: #CC1F1F;
+      --red-light: #E53535;
+      --red-bg: #FFF0F0;
+      --red-border: rgba(204, 31, 31, 0.16);
+      --white: #FFFFFF;
+      --off: #FAF8F7;
+      --ink: #1C1010;
+      --muted: #7A5555;
+      --green: #0F6E56;
+      --green-bg: #E1F5EE;
+      --gold: #9A6B00;
+      --gold-bg: #FBF0DA;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: var(--off);
+      color: var(--ink);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 40px;
+      background: rgba(250, 248, 247, 0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--red-border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      object-fit: cover;
+    }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--red-border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-back:hover {
+      color: var(--red);
+      border-color: var(--red);
+      background: var(--red-bg);
+    }
+
+    /* ── HERO ── */
+    .ref-hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 40px 40px;
+      text-align: center;
+    }
+
+    .ref-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+
+    .ref-hero-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    .ref-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .ref-hero h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .ref-hero p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+
+    .ref-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 13px 26px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--red-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 13px 26px;
+      border-radius: 100px;
+      text-decoration: none;
+      border: 1px solid var(--red-border);
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* ── SECTION SHELL ── */
+    section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 56px 40px;
+    }
+
+    .section-label {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-label .eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    .section-label h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-label p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--red-border);
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* ── TIER GRAPHICS ── */
+    .tier-path {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .tier-path::before {
+      content: "";
+      position: absolute;
+      top: 64px;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--red-border) 0 8px, transparent 8px 16px);
+      z-index: 0;
+    }
+
+    .tier-card {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      padding: 30px 22px;
+      border: 1px solid var(--red-border);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 8px 28px rgba(28, 16, 16, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    .tier-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(28, 16, 16, 0.09);
+    }
+
+    .tier-medal {
+      width: 76px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1rem;
+      border-radius: 50%;
+      background: var(--green-bg);
+      box-shadow: inset 0 0 0 3px white, 0 0 0 4px var(--green-bg);
+      position: relative;
+    }
+
+    .tier-medal::after {
+      content: attr(data-level);
+      position: absolute;
+      bottom: -6px;
+      right: -6px;
+      width: 24px;
+      height: 24px;
+      background: var(--ink);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.68rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+    }
+
+    .tier-catalyst .tier-medal {
+      background: var(--red-bg);
+      box-shadow: inset 0 0 0 3px white, 0 0 0 4px var(--red-bg);
+    }
+
+    .tier-legend .tier-medal {
+      background: var(--gold-bg);
+      box-shadow: inset 0 0 0 3px white, 0 0 0 4px var(--gold-bg);
+    }
+
+    .tier-name {
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .tier-trigger {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tier-reward {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--green-bg);
+      color: var(--green);
+    }
+
+    .tier-catalyst .tier-reward {
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .tier-legend .tier-reward {
+      background: var(--gold-bg);
+      color: var(--gold);
+    }
+
+    .tier-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 24px;
+    }
+
+    /* ── STEPS ── */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .step-row {
+      display: flex;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--red-border);
+    }
+
+    .step-row:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--red-bg);
+      color: var(--red);
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-body h3 {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .step-body p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── WAYS TO SHARE ── */
+    .share-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .share-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 22px 20px;
+      border: 1px solid var(--red-border);
+      border-radius: 16px;
+      background: var(--off);
+      transition: all 0.2s ease;
+    }
+
+    .share-card:hover {
+      border-color: var(--red);
+      background: var(--red-bg);
+      transform: translateY(-3px);
+    }
+
+    .share-icon {
+      font-size: 1.4rem;
+    }
+
+    .share-name {
+      font-weight: 700;
+      font-size: 0.87rem;
+    }
+
+    .share-desc {
+      font-size: 0.77rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    /* ── SECURITY ── */
+    .security-section {
+      background: var(--ink);
+      color: white;
+      border-radius: 24px;
+      max-width: 1080px;
+      margin: 0 auto 56px;
+      padding: 52px 44px;
+    }
+
+    .security-section .section-label h2,
+    .security-section .section-label p {
+      color: white;
+    }
+
+    .security-section .section-label p {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .security-section .eyebrow {
+      color: #FF8A8A;
+    }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .sec-card {
+      display: flex;
+      gap: 14px;
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sec-icon {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .sec-body h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .sec-body p {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.6;
+    }
+
+    .security-footnote {
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 24px;
+      line-height: 1.7;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--red-border);
+      border-radius: 14px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 22px;
+      background: none;
+      border: none;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .faq-question .plus {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--red-bg);
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item.open .faq-question .plus {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 22px 20px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── FOOTER CTA ── */
+    .final-cta {
+      text-align: center;
+      padding: 60px 40px 80px;
+    }
+
+    .final-cta h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .final-cta p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 40px;
+      border-top: 1px solid var(--red-border);
+      font-size: 0.78rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--red);
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav {
+        padding: 14px 20px;
+      }
+
+      .ref-hero {
+        padding: 44px 24px 32px;
+      }
+
+      .ref-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 44px 24px;
+      }
+
+      .tier-path {
+        grid-template-columns: 1fr;
+      }
+
+      .tier-path::before {
+        display: none;
+      }
+
+      .share-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .security-section {
+        border-radius: 0;
+        padding: 40px 24px;
+      }
+
+      .security-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="nav-brand" href="https://parkspacer.com/cardsense/index.html">
+      <img src="https://parkspacer.com/cardsense/cardsense2.png" alt="CardSense" onerror="this.style.display='none'">
+      CardSense
+    </a>
+    <a class="nav-back" href="https://parkspacer.com/cardsense/index.html">← Back to home</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div class="ref-hero">
+    <div class="ref-hero-tag reveal"><span class="dot"></span> Referral Program</div>
+    <h1 class="reveal d1">Refer friends. <em>Earn free Premium.</em></h1>
+    <p class="reveal">
+      Every friend you bring to CardSense moves you closer to free months of Premium — no purchase required
+      on your end. Here's exactly how the levels, sharing, and fraud protections work.
+    </p>
+    <div class="ref-hero-actions reveal">
+      <a class="btn-primary" href="#levels">See the levels</a>
+      <a class="btn-secondary" href="#faq">Jump to FAQs</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── LEVELS / GRAPHICS ── -->
+  <section id="levels">
+    <div class="section-label reveal">
+      <span class="eyebrow">Reward Tiers</span>
+      <h2>Three levels to unlock</h2>
+      <p>Your badge and reward grow as friends join and subscribe. Levels unlock once and are yours to keep.</p>
+    </div>
+
+    <div class="tier-path">
+      <div class="tier-card tier-pioneer reveal d1">
+        <div class="tier-medal" data-level="1">🌱</div>
+        <div class="tier-name">Pioneer</div>
+        <div class="tier-trigger">At least 1 referred friend<br>signs up (any plan, incl. free)</div>
+        <span class="tier-reward">+1 free month</span>
+      </div>
+      <div class="tier-card tier-catalyst reveal d2">
+        <div class="tier-medal" data-level="2">⚡</div>
+        <div class="tier-name">Catalyst</div>
+        <div class="tier-trigger">At least 1 referred friend<br>activates a paid subscription</div>
+        <span class="tier-reward">+3 free months</span>
+      </div>
+      <div class="tier-card tier-legend reveal d3">
+        <div class="tier-medal" data-level="3">👑</div>
+        <div class="tier-name">Legend</div>
+        <div class="tier-trigger">5 referred friends have<br>active paid subscriptions</div>
+        <span class="tier-reward">+12 free months</span>
+      </div>
+    </div>
+
+    <p class="tier-note reveal">
+      Rewards stack — a Legend can hold up to 16 free months total. Each level unlocks once and never expires
+      once earned; you choose when to activate it.
+    </p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── HOW TO REFER ── -->
+  <section id="how-it-works">
+    <div class="section-label reveal">
+      <span class="eyebrow">Getting Started</span>
+      <h2>How to invite a friend</h2>
+      <p>From opening the referral screen to your friend's first sign-up, here's the full path.</p>
+    </div>
+
+    <div class="steps-list">
+      <div class="step-row reveal d1">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Open the Referral Program</h3>
+          <p>Go to <strong>More → Referral Program</strong> in the app. Available once you're on the Basic plan.
+          </p>
+        </div>
+      </div>
+      <div class="step-row reveal d1">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Get your unique code &amp; link</h3>
+          <p>CardSense generates a personal code (e.g. <strong>JOHN-A3B2</strong>) and a shareable link tied only to
+            your account.</p>
+        </div>
+      </div>
+      <div class="step-row reveal d2">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Share it with friends</h3>
+          <p>Tap Share to send your link through Messenger, SMS, email, or any app — or hand them your code directly.
+          </p>
+        </div>
+      </div>
+      <div class="step-row reveal d2">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Friend installs &amp; signs in</h3>
+          <p>Your friend taps your link (or enters your code), installs CardSense, and signs in with Google on their
+            own device.</p>
+        </div>
+      </div>
+      <div class="step-row reveal d3">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3>Your progress updates automatically</h3>
+          <p>Once they sign up — and later subscribe — your badge, progress bar, and rewards update in real time on
+            the Referral screen.</p>
+        </div>
+      </div>
+      <div class="step-row reveal d3">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <h3>Claim your reward</h3>
+          <p>When a level unlocks, tap <strong>Activate Reward</strong> to apply your free months whenever you're
+            ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── WAYS TO SHARE ── -->
+  <section id="ways-to-share">
+    <div class="section-label reveal">
+      <span class="eyebrow">Share Anywhere</span>
+      <h2>Ways to refer and earn</h2>
+      <p>Multiple ways to get your link in front of friends and family.</p>
+    </div>
+
+    <div class="share-grid">
+      <div class="share-card reveal d1">
+        <div class="share-icon">🔗</div>
+        <div class="share-name">Unique link</div>
+        <div class="share-desc">One tap to copy your personal invite link — works from any app or browser.</div>
+      </div>
+      <div class="share-card reveal d2">
+        <div class="share-icon">💬</div>
+        <div class="share-name">Chat &amp; SMS</div>
+        <div class="share-desc">Send directly through Messenger, Viber, or text message using the native share
+          sheet.</div>
+      </div>
+      <div class="share-card reveal d3">
+        <div class="share-icon">🔢</div>
+        <div class="share-name">Manual code</div>
+        <div class="share-desc">Read your code out loud or write it down — friends can type it in at sign-up.</div>
+      </div>
+      <div class="share-card reveal d4">
+        <div class="share-icon">📱</div>
+        <div class="share-name">Social &amp; email</div>
+        <div class="share-desc">Post to your story or send by email — every click is tracked back to your account.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SECURITY / FRAUD PREVENTION ── -->
+  <section>
+    <div class="security-section">
+      <div class="section-label reveal">
+        <span class="eyebrow">Fair Play</span>
+        <h2>Built to stop abuse, not friends</h2>
+        <p>The referral program is monitored server-side to keep rewards fair for everyone. Here's what's protected.
+        </p>
+      </div>
+
+      <div class="security-grid">
+        <div class="sec-card reveal d1">
+          <div class="sec-icon">🚫</div>
+          <div class="sec-body">
+            <h3>Self-referral blocking</h3>
+            <p>Your own email and referral code are automatically rejected — both on-device and on our servers —
+              before a signup is ever recorded.</p>
+          </div>
+        </div>
+        <div class="sec-card reveal d1">
+          <div class="sec-icon">📵</div>
+          <div class="sec-body">
+            <h3>Same-device detection</h3>
+            <p>A secure device fingerprint checks that the referrer and referee aren't signing up from the same
+              physical phone.</p>
+          </div>
+        </div>
+        <div class="sec-card reveal d2">
+          <div class="sec-icon">1️⃣</div>
+          <div class="sec-body">
+            <h3>One referral per device</h3>
+            <p>Each physical device can only ever be credited as a referee once — switching Google accounts or
+              clearing app data doesn't reset it.</p>
+          </div>
+        </div>
+        <div class="sec-card reveal d2">
+          <div class="sec-icon">🛡️</div>
+          <div class="sec-body">
+            <h3>Server-verified rewards</h3>
+            <p>All signups, subscriptions, and reward grants are validated in our backend — never trusted from the
+              app alone.</p>
+          </div>
+        </div>
+        <div class="sec-card reveal d3">
+          <div class="sec-icon">🚩</div>
+          <div class="sec-body">
+            <h3>Fraud logging &amp; auto-deactivation</h3>
+            <p>Suspicious attempts are logged, and accounts that accumulate repeated red flags have their referral
+              program automatically deactivated.</p>
+          </div>
+        </div>
+        <div class="sec-card reveal d3">
+          <div class="sec-icon">🔒</div>
+          <div class="sec-body">
+            <h3>Privacy-masked emails</h3>
+            <p>Referee emails are stored securely and only ever shown to you in masked form — never in full.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="security-footnote">
+        These protections run quietly in the background — legitimate referrals to real friends on their own devices
+        are never affected.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section id="faq">
+    <div class="section-label reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know about earning free Premium through referrals.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Who can join the Referral Program?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The program can only be started by users on the <strong>Basic plan</strong>. Once you initiate it from
+            More → Referral Program, you'll get your own unique code and link to start sharing.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          What do I earn at each level?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            🌱 Pioneer (1 friend signs up) earns +1 free month. ⚡ Catalyst (1 friend subscribes) earns +3 free
+            months. 👑 Legend (5 friends subscribe) earns +12 free months. Rewards stack, so a Legend can bank up to
+            16 free months.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Do I need to do anything for my reward to be granted?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes — rewards are never applied automatically. Once a level unlocks, open the Referral screen and tap
+            <strong>Activate Reward</strong> to claim your free months whenever you're ready.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Can I refer myself to get free months faster?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No. Self-referrals are blocked both in the app and on our servers — using your own email or your own
+            referral code will always be rejected, and repeated attempts may flag your account.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Can I create multiple accounts on the same phone to earn more rewards?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No. Each physical device can only ever be credited as a referee once, based on a secure device
+            fingerprint. Switching Google accounts or clearing app data on the same phone will not bypass this, and
+            attempts are logged as fraud.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          What happens if a friend I referred cancels their subscription?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Nothing changes for you — levels are one-time unlocks and are never revoked. If they had already
+            activated a paid plan at least once, that still counts toward your Catalyst and Legend progress.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Does the same friend count twice if they sign up again?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No, each referred email is counted only once per referrer, even if that person deletes and recreates
+            their account later.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          How can my friend use my referral code?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            They can tap your shared link directly to open CardSense with your code pre-filled, or manually type your
+            code in during sign-up. Either way, it's automatically linked to your account once they sign in.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Is my friend's email visible to me?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            You'll see a masked version of their email (e.g. <strong>j***@gmail.com</strong>) in your referrals list
+            so you can track progress — the full address is never shown.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          Do my free months expire?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Earned months don't disappear once unlocked — you decide when to activate each reward, and the Legend
+            reward can even be used later even if you already have an active subscription.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          What if I think my account was wrongly flagged?
+          <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Reach out through the app's support channel with your account details. Our team can review the fraud log
+            and reactivate your program if it was flagged in error.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <div class="final-cta">
+    <h2 class="reveal">Ready to start earning?</h2>
+    <p class="reveal">Head to More → Referral Program in the app to get your unique code.</p>
+    <a class="btn-primary reveal" href="https://parkspacer.com/cardsense/index.html#pricing">Get the Basic plan →</a>
+  </div>
+
+  <footer>
+    <span class="footer-brand">CardSense</span>
+    <span><a href="https://parkspacer.com/cardsense/">Home</a></span>
+    <span><a href="https://parkspacer.com/cardsense/privacy-policy.html">Privacy Policy</a></span>
+    <span><a href="https://parkspacer.com/cardsense/terms_and_conditions.html">Terms &amp; Conditions</a></span>
+    <span>© 2026 CardSense</span>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          answer.style.maxHeight = null;
+        } else {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
