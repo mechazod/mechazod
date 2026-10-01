@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardSense — Privacy & Security</title>
+  <meta content="CardSense — Privacy & Security" name="title" />
+  <meta content="Your credit-card information should stay yours. Learn how CardSense protects your data." name="description" />
+  <meta content="#CC1F1F" name="theme-color" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #CC1F1F; --red-light: #E53535; --red-bg: #FFF0F0; --red-border: rgba(204, 31, 31, 0.16);
+      --white: #FFFFFF; --off: #FAF8F7; --ink: #1C1010; --muted: #7A5555;
+    }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: var(--off);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px; background: rgba(250, 248, 247, 0.93);
+      backdrop-filter: blur(14px); border-bottom: 1px solid var(--red-border);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem;
+      color: var(--ink); text-decoration: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+    h1 {
+      font-size: clamp(2rem, 3.2vw, 3.1rem); font-weight: 900; color: var(--ink); margin-bottom: 12px;
+      line-height: 1.1; letter-spacing: -0.03em;
+    }
+    h2 { font-size: 1.5rem; font-weight: 800; color: var(--ink); margin: 40px 0 16px; }
+    p { margin-bottom: 16px; font-size: 1.05rem; color: var(--ink); }
+    .highlight {
+      background: var(--red-bg); padding: 24px; border-left: 4px solid var(--red);
+      border-radius: 8px; margin: 24px 0;
+    }
+    .highlight p:last-child { margin-bottom: 0; }
+    ul { margin: 16px 0 16px 24px; }
+    li { margin-bottom: 8px; font-size: 1.05rem; }
+    .footer-links {
+      display: flex; gap: 20px; justify-content: center; padding: 40px;
+      border-top: 1px solid var(--red-border); margin-top: 60px;
+    }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZ5HBFQC5X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BZ5HBFQC5X');
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="../" class="nav-brand">CardSense</a>
+  </nav>
+
+  <div class="container">
+    <h1>Privacy & Security</h1>
+    <p><strong>Your credit-card information should stay yours.</strong></p>
+    
+    <p>CardSense is designed for Filipino cardholders who want a simpler way to organize their credit cards, statements, due dates, rewards, and spending.</p>
+    
+    <div class="highlight">
+      <p>Because this information is sensitive, we designed CardSense with a simple principle:</p>
+      <p><strong>Collect as little as possible. Keep your financial information under your control.</strong></p>
+    </div>
+
+    <h2>CardSense is designed to work without your bank login</h2>
+    <p>CardSense does not need your online-banking username, password, or bank login to organize your credit-card information.</p>
+    <p>Instead, you can provide information to CardSense yourself, including your credit-card statement when supported.</p>
+    <p>We don't need access to your bank account to help you organize your cards.</p>
+
+    <h2>Your statement stays on your device</h2>
+    <p>When you import a supported PDF statement, CardSense is designed to process the statement locally on your device.</p>
+    <p>That means your statement does not need to be uploaded to a CardSense server simply for CardSense to read it.</p>
+    <p>Your statement can contain sensitive information. We therefore designed the app around local processing rather than requiring you to send your financial documents to a cloud service.</p>
+    
+    <div class="highlight">
+      <p><strong>In simple terms</strong></p>
+      <p>Your statement → your phone → CardSense processes it</p>
+      <p><strong>Not:</strong></p>
+      <p>Your statement → uploaded to our server → processed in the cloud</p>
+    </div>
+
+    <h2>What information does CardSense use?</h2>
+    <p>Depending on the features you use, CardSense may work with information such as:</p>
+    <ul>
+      <li>Credit-card names and details you enter</li>
+      <li>Statement dates</li>
+      <li>Payment due dates</li>
+      <li>Transactions</li>
+      <li>Amounts</li>
+      <li>Rewards information</li>
+      <li>Annual-fee information</li>
+      <li>Information extracted from supported statements</li>
+    </ul>
+    <p>The exact information available to CardSense depends on what you choose to enter or import.</p>
+
+    <h2>What CardSense does not need</h2>
+    <p>CardSense is designed so that you do not need to provide:</p>
+    <ul>
+      <li>Your online-banking password</li>
+      <li>Your bank login credentials</li>
+      <li>Your bank's security questions</li>
+      <li>Your one-time password (OTP)</li>
+    </ul>
+    <p><strong>Never give your bank password or OTP to CardSense—or to any third-party app.</strong></p>
+
+    <h2>We don't sell your financial information</h2>
+    <p>Your financial information is not a product for advertisers.</p>
+    <p>CardSense is designed around the principle that your credit-card information should not be sold or shared simply because you use an organization tool.</p>
+    <p>We do not use your financial information to create a profile for advertisers.</p>
+
+    <h2>No financial transactions</h2>
+    <p>CardSense is an organization and tracking tool.</p>
+    <p>It does not:</p>
+    <ul>
+      <li>Transfer money from your bank account</li>
+      <li>Pay your credit-card bill</li>
+      <li>Initiate bank transactions</li>
+      <li>Replace your bank's official app</li>
+      <li>Approve or provide credit</li>
+    </ul>
+    <p>Your bank remains the place to make payments and manage your actual credit-card account.</p>
+
+    <h2>Security is a process, not a promise</h2>
+    <p>No application can honestly promise that software is completely risk-free.</p>
+    <p>Our goal is to reduce unnecessary exposure of your financial information by minimizing the amount of sensitive data that needs to leave your device in the first place.</p>
+    <p>We continuously work to improve CardSense's security, privacy, reliability, and data-handling practices.</p>
+
+    <h2>Your responsibility matters too</h2>
+    <p>Please protect your phone and your CardSense account, if applicable, with a strong device passcode and the security features available on your device.</p>
+    <p>Never share:</p>
+    <ul>
+      <li>Bank passwords</li>
+      <li>OTPs</li>
+      <li>Card PINs</li>
+      <li>Security codes</li>
+      <li>Card credentials</li>
+    </ul>
+    <p>with anyone claiming to represent CardSense.</p>
+    <p>CardSense will never ask you to send your bank password or OTP through chat, email, social media, or any other communication channel.</p>
+
+    <h2>Transparency</h2>
+    <p>We believe financial software should explain what it does with your information in plain language.</p>
+    <p>If our data practices change, we will update this page and explain the change clearly.</p>
+    <p>If you have a privacy or security question, contact us through the official CardSense support channel.</p>
+
+    <h2>Built for Filipino cardholders</h2>
+    <p>CardSense is designed around the real-world needs of people managing Philippine credit cards and statements.</p>
+    <p>Our goal is simple:</p>
+    <p>Help you understand and organize your cards without requiring unnecessary access to your financial life.</p>
+    
+    <p style="margin-top: 40px; color: var(--muted); font-size: 0.9rem;">Last updated: October 2026</p>
+  </div>
+
+  <div class="footer-links">
+    <a href="../privacy-policy.html">Privacy Policy</a>
+    <a href="../terms_and_conditions.html">Terms & Conditions</a>
+    <span>© 2026 CardSense</span>
+  </div>
+</body>
+</html>

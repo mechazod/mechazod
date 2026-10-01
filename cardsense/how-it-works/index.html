@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardSense — How It Works</title>
+  <meta content="CardSense — How It Works" name="title" />
+  <meta content="Discover how CardSense helps you organize your credit cards securely and without requiring your bank login." name="description" />
+  <meta content="#CC1F1F" name="theme-color" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #CC1F1F; --red-light: #E53535; --red-bg: #FFF0F0; --red-border: rgba(204, 31, 31, 0.16);
+      --white: #FFFFFF; --off: #FAF8F7; --ink: #1C1010; --muted: #7A5555;
+    }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: var(--off);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px; background: rgba(250, 248, 247, 0.93);
+      backdrop-filter: blur(14px); border-bottom: 1px solid var(--red-border);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem;
+      color: var(--ink); text-decoration: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+    h1 {
+      font-size: clamp(2rem, 3.2vw, 3.1rem); font-weight: 900; color: var(--ink); margin-bottom: 32px;
+      line-height: 1.1; letter-spacing: -0.03em;
+    }
+    h3 { font-size: 1.25rem; font-weight: 800; color: var(--ink); margin: 32px 0 12px; }
+    p { margin-bottom: 16px; font-size: 1.05rem; color: var(--ink); }
+    .footer-links {
+      display: flex; gap: 20px; justify-content: center; padding: 40px;
+      border-top: 1px solid var(--red-border); margin-top: 60px;
+    }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  </style>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZ5HBFQC5X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BZ5HBFQC5X');
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="../" class="nav-brand">CardSense</a>
+  </nav>
+
+  <div class="container">
+    <h1>How It Works</h1>
+    
+    <p>CardSense is designed to make managing your credit cards straightforward, secure, and hassle-free.</p>
+    
+    <h3>1. Add your cards</h3>
+    <p>Start by adding your credit cards to the app. You don't need to link your bank account or provide any login credentials.</p>
+
+    <h3>2. Import your statements</h3>
+    <p>When you receive your monthly Statement of Account (SOA), simply import the PDF into CardSense. The app processes the file locally on your device to extract your due dates, total amounts, and transactions.</p>
+
+    <h3>3. Track and organize</h3>
+    <p>CardSense gives you a clear dashboard showing all your upcoming due dates, recent spending across all cards, and rewards tracking—so you never miss a payment and always maximize your benefits.</p>
+
+    <h3>4. Stay secure</h3>
+    <p>Because everything happens on your device, your financial data stays private. We don't have access to your bank account, and your statement files are never uploaded to the cloud.</p>
+  </div>
+
+  <div class="footer-links">
+    <a href="../privacy-policy.html">Privacy Policy</a>
+    <a href="../terms_and_conditions.html">Terms & Conditions</a>
+    <span>© 2026 CardSense</span>
+  </div>
+</body>
+</html>
