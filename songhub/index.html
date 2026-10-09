@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongHub Installation Guide</title>
+    <meta name="description" content="Step-by-step guide to installing SongHub on your Android TV device.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary: #f3f4f6;
+            --text-main: #111827;
+            --text-light: #4b5563;
+            --border: #e5e7eb;
+            --bg: #ffffff;
+            --danger-bg: #fef2f2;
+            --danger-text: #991b1b;
+            --danger-border: #f87171;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 60px 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+            color: #111827;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .disclaimer {
+            background-color: var(--danger-bg);
+            border-left: 4px solid var(--danger-border);
+            color: var(--danger-text);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 3rem;
+            font-size: 0.95rem;
+        }
+
+        .disclaimer a {
+            color: var(--danger-text);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .steps-container {
+            margin-bottom: 4rem;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 1.25rem;
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-color: #d1d5db;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1.25rem;
+            font-size: 1rem;
+        }
+
+        .step-content {
+            padding-top: 3px;
+        }
+
+        .step-content strong {
+            color: #1f2937;
+        }
+
+        .step-content a.inline-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .step-content a.inline-link:hover {
+            text-decoration: underline;
+        }
+
+        .inline-btn {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background: var(--primary);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none !important;
+            transition: background 0.2s;
+        }
+
+        .inline-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        h2.cta-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 640px) {
+            .cta-section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .cta-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 1rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1rem;
+            text-align: center;
+            height: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.15);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg);
+            color: var(--text-main);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f9fafb;
+            border-color: #d1d5db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sponsors-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .sponsors-section h3 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .sponsor-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .sponsor-items {
+                flex-direction: row;
+                gap: 2.5rem;
+            }
+        }
+
+        .sponsor-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.95rem;
+            color: #475569;
+            background: white;
+            padding: 1.25rem 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            min-width: 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s;
+        }
+
+        .sponsor-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-color: #d1d5db;
+        }
+
+        .sponsor-item a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 0.25rem;
+        }
+
+        .sponsor-item a:hover {
+            text-decoration: underline;
+        }
+
+        .sponsor-item strong {
+            color: #1e293b;
+        }
+
+        .sponsor-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Install SongHub</h1>
+        <div class="subtitle">Follow these steps to set up SongHub on your Android TV device.</div>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This application is provided for personal consumption only. The open source
+            provider (<a href="https://github.com/jpdcs/SongHub-Android/releases/tag/3.1.67" target="_blank"
+                rel="noopener noreferrer">https://github.com/jpdcs/SongHub-Android/releases/tag/3.1.67</a>) and
+            third-party providers have no violation on it. Usage is entirely at your own risk. You are reliable for
+            executing these steps.
+        </div>
+
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">Open your Android TV device, ensure it has internet connectivity, and go to
+                    <strong>Apps</strong>.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">Search for the <strong>Downloader</strong> app (it typically has an orange or
+                    yellow icon and appears first) and download it.</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">Open the installed <strong>Downloader</strong> app and enter this URL: <br><a
+                        href="https://parkspacer.com/songhub/" class="inline-link"
+                        target="_blank">https://parkspacer.com/songhub/</a></div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    Once the page is loaded, download the Android Device installer by clicking the button below (it will
+                    open in a new tab so you won't lose this page).
+                    <br>
+                    <a href="https://parkspacer.com/songhub/app.apk" class="inline-btn" target="_blank"
+                        rel="noopener noreferrer">Download TV Installer</a>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">Allow the Downloader app to install unknown apps. Navigate to <strong>Apps
+                        &gt; Downloader &gt; Permission settings</strong> and enable <strong>Install unknown
+                        sources</strong>.</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">Follow the on-screen prompts to install the <strong>SongHub</strong> app you
+                    just downloaded.</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">7</div>
+                <div class="step-content">Grant necessary permissions for SongHub. Go to <strong>Apps &gt; Search
+                        SongHub &gt; Permissions</strong> and allow <strong>Camera</strong>, <strong>Storage</strong>,
+                    and <strong>Location</strong>.</div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">8</div>
+                <div class="step-content">Open <strong>SongHub</strong>. If it asks for an activation key, copy the
+                    <strong>Device ID</strong> and back to Downloader app proceed to this link to paste the device ID <a
+                        href="https://songhub-activation.pages.dev/" class="inline-link"
+                        target="_blank">https://songhub-activation.pages.dev/</a>.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="cta-title">Quick Links</h2>
+        <div class="cta-section">
+            <a href="https://parkspacer.com/songhub/app.apk" class="cta-btn btn-primary" target="_blank"
+                rel="noopener noreferrer">
+                <span class="btn-icon">📺</span>
+                TV Installer (APK)
+            </a>
+            <a href="https://parkspacer.com/songhub/phone.apk" class="cta-btn btn-secondary" target="_blank"
+                rel="noopener noreferrer">
+                <span class="btn-icon">📱</span>
+                Phone Remote App
+            </a>
+            <a href="https://songhub-activation.pages.dev/" class="cta-btn btn-secondary" target="_blank"
+                rel="noopener noreferrer">
+                <span class="btn-icon">🔑</span>
+                Get Activation Key
+            </a>
+        </div>
+
+        <div class="sponsors-section">
+            <h3>Support & Sponsors</h3>
+            <div class="sponsor-items">
+                <div class="sponsor-item">
+                    <span class="sponsor-icon">
+                        <img src="https://parkspacer.com/cardsense/cardsense2.png" alt="CardSense" width="50"
+                            height="50" onerror="this.style.display='none'">
+                    </span>
+                    <span><strong>Sponsor App</strong></span>
+                    <a href="https://play.google.com/store/apps/details?id=com.cardsense.mejia" target="_blank"
+                        rel="noopener noreferrer">CardSense on Google Play</a>
+                </div>
+                <div class="sponsor-item">
+                    <span class="sponsor-icon">💙</span>
+                    <span><strong>GCash Donation Tip</strong></span>
+                    <strong
+                        style="margin-top: 0.25rem; font-size: 1.1rem; color: var(--primary);">+639972507164</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
