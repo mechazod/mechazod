@@ -148,7 +148,7 @@
 
         .cta-section {
             display: grid;
-            gap: 1rem;
+            gap: 0.5rem;
             grid-template-columns: 1fr;
         }
 
@@ -278,126 +278,667 @@
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
+
+        .faq-section {
+            margin-top: 4rem;
+            padding: 2.5rem;
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-section h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-item details summary {
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            color: #334155;
+            background-color: #f8fafc;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.2s;
+        }
+
+        .faq-item details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item details summary::after {
+            content: "+";
+            font-size: 1.25rem;
+            color: var(--primary);
+            transition: transform 0.2s;
+        }
+
+        .faq-item details[open] summary::after {
+            content: "−";
+            transform: rotate(180deg);
+        }
+
+        .faq-item details summary:hover {
+            background-color: #f1f5f9;
+        }
+
+        .faq-content {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: #475569;
+            font-size: 0.95rem;
+            background-color: white;
+            line-height: 1.7;
+        }
+
+        .faq-content ul {
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+            padding-left: 1.5rem;
+        }
+
+        .faq-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-content code {
+            background-color: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: #ef4444;
+            font-family: monospace;
+        }
+
+        .footer-views {
+            margin-top: 3rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .views-label {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Live Counter Styles */
+        .live-counter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 1rem auto;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+
+        .visitor-counter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #10b981;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 1rem auto;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .like-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0.5rem auto;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+            margin-left: 0.5rem;
+        }
+
+        .like-button:hover:not(.liked) {
+            background: rgba(239, 68, 68, 0.2);
+            transform: scale(1.05);
+        }
+
+        .like-button:active:not(.liked) {
+            transform: scale(0.95);
+        }
+
+        .like-button.liked {
+            cursor: default;
+            opacity: 0.8;
+        }
+
+        .like-emoji {
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        /* App Screenshots Carousel */
+        .app-screenshots {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
+        .app-screenshots::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .app-screenshots::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .app-screenshots::-webkit-scrollbar-thumb {
+            background: rgba(16, 185, 129, 0.4);
+            border-radius: 4px;
+        }
+
+        .screenshot-img {
+            flex-shrink: 0;
+            scroll-snap-align: center;
+            height: 180px;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            object-fit: cover;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
     </style>
+
+
 </head>
 
 <body>
 
+
+    <div class="language-selector" style="position: absolute; top: 1rem; right: 1rem;">
+        <select id="lang-select" onchange="changeLanguage(this.value)"
+            style="padding: 0.5rem; border-radius: 6px; border: 1px solid #cbd5e1; font-family: inherit; font-size: 0.9rem; background-color: white; color: #1e293b; cursor: pointer; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <option value="en">🇺🇸 English</option>
+            <option value="tl" selected>🇵🇭 Tagalog</option>
+            <option value="bhk">🇵🇭 Bicolano</option>
+            <option value="ceb">🇵🇭 Cebuano (Bisaya)</option>
+            <option value="cbk">🇵🇭 Chavacano</option>
+            <option value="hil">🇵🇭 Hiligaynon (Ilonggo)</option>
+            <option value="ilo">🇵🇭 Ilocano</option>
+            <option value="kap">🇵🇭 Kapampangan</option>
+            <option value="pag">🇵🇭 Pangasinense</option>
+            <option value="war">🇵🇭 Waray</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="zh">🇨🇳 中文</option>
+        </select>
+    </div>
     <div class="container">
-        <h1>Install SongHub</h1>
-        <div class="subtitle">Follow these steps to set up SongHub on your Android TV device.</div>
+        <h1 data-i18n="title">Install SongHub</h1>
+        <div class="subtitle" data-i18n="subtitle">Follow these steps to set up SongHub on your Android TV device.</div>
 
         <div class="disclaimer">
-            <strong>Disclaimer:</strong> This application is provided for personal consumption only. The open source
-            provider (<a href="https://github.com/jpdcs/SongHub-Android/releases/tag/3.1.67" target="_blank"
-                rel="noopener noreferrer">https://github.com/jpdcs/SongHub-Android/releases/tag/3.1.67</a>) and
-            third-party providers have no violation on it. Usage is entirely at your own risk. You are reliable for
-            executing these steps.
+            <span data-i18n="disclaimer"><strong>Disclaimer:</strong> This application is provided for personal
+                consumption only. The open source provider and third-party providers have no violation on it. Usage is
+                entirely at your own risk. You are reliable for executing these steps.</span>
+            (<a href="https://github.com/jpdcs/SongHub-Android/releases/tag/3.1.67" target="_blank"
+                rel="noopener noreferrer">Source</a>)
         </div>
 
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
-                <div class="step-content">Open your Android TV device, ensure it has internet connectivity, and go to
-                    <strong>Apps</strong>.
-                </div>
+                <div class="step-content" data-i18n="step1">Open your Android TV device, ensure it has internet
+                    connectivity, and go to <strong>Apps</strong>.</div>
             </div>
 
             <div class="step">
                 <div class="step-number">2</div>
-                <div class="step-content">Search for the <strong>Downloader</strong> app (it typically has an orange or
-                    yellow icon and appears first) and download it.</div>
+                <div class="step-content" data-i18n="step2">Search for the <strong>Downloader</strong> app (it typically
+                    has an orange or yellow icon and appears first) and download it.</div>
             </div>
 
             <div class="step">
                 <div class="step-number">3</div>
-                <div class="step-content">Open the installed <strong>Downloader</strong> app and enter this URL: <br><a
-                        href="https://parkspacer.com/songhub/" class="inline-link"
+                <div class="step-content" data-i18n="step3">Open the installed <strong>Downloader</strong> app and enter
+                    this URL: <br><a href="https://parkspacer.com/songhub/" class="inline-link"
                         target="_blank">https://parkspacer.com/songhub/</a></div>
             </div>
 
             <div class="step">
                 <div class="step-number">4</div>
-                <div class="step-content">
-                    Once the page is loaded, download the Android Device installer by clicking the button below (it will
-                    open in a new tab so you won't lose this page).
-                    <br>
-                    <a href="https://parkspacer.com/songhub/app.apk" class="inline-btn" target="_blank"
-                        rel="noopener noreferrer">Download TV Installer</a>
-                </div>
+                <div class="step-content" data-i18n="step4">Once the page is loaded, download the Android Device
+                    installer by clicking the button below (it will open in a new tab so you won't lose this
+                    page).<br><a href="https://parkspacer.com/songhub/app.apk" class="inline-btn" target="_blank"
+                        rel="noopener noreferrer">Download TV Installer</a></div>
             </div>
 
             <div class="step">
                 <div class="step-number">5</div>
-                <div class="step-content">Allow the Downloader app to install unknown apps. Navigate to <strong>Apps
-                        &gt; Downloader &gt; Permission settings</strong> and enable <strong>Install unknown
+                <div class="step-content" data-i18n="step5">Allow the Downloader app to install unknown apps. Navigate
+                    to <strong>Apps &gt; Downloader &gt; Permission settings</strong> and enable <strong>Install unknown
                         sources</strong>.</div>
             </div>
 
             <div class="step">
                 <div class="step-number">6</div>
-                <div class="step-content">Follow the on-screen prompts to install the <strong>SongHub</strong> app you
-                    just downloaded.</div>
+                <div class="step-content" data-i18n="step6">Follow the on-screen prompts to install the
+                    <strong>SongHub</strong> app you just downloaded.
+                </div>
             </div>
 
             <div class="step">
                 <div class="step-number">7</div>
-                <div class="step-content">Grant necessary permissions for SongHub. Go to <strong>Apps &gt; Search
-                        SongHub &gt; Permissions</strong> and allow <strong>Camera</strong>, <strong>Storage</strong>,
-                    and <strong>Location</strong>.</div>
+                <div class="step-content" data-i18n="step7">Grant necessary permissions for SongHub. Go to <strong>Apps
+                        &gt; Search SongHub &gt; Permissions</strong> and allow <strong>Camera</strong>,
+                    <strong>Storage</strong>, and <strong>Location</strong>.
+                </div>
             </div>
 
             <div class="step">
                 <div class="step-number">8</div>
-                <div class="step-content">Open <strong>SongHub</strong>. If it asks for an activation key, copy the
-                    <strong>Device ID</strong> and back to Downloader app proceed to this link to paste the device ID <a
-                        href="https://songhub-activation.pages.dev/" class="inline-link"
-                        target="_blank">https://songhub-activation.pages.dev/</a>.
-                </div>
+                <div class="step-content" data-i18n="step8">Open <strong>SongHub</strong>. If it asks for an activation
+                    key, copy the <strong>Device ID</strong> and back to Downloader app proceed to this link to paste
+                    the device ID <a href="https://songhub-activation.pages.dev/" class="inline-link"
+                        target="_blank">https://songhub-activation.pages.dev/</a>.</div>
             </div>
         </div>
 
-        <h2 class="cta-title">Quick Links</h2>
-        <div class="cta-section">
-            <a href="https://parkspacer.com/songhub/app.apk" class="cta-btn btn-primary" target="_blank"
-                rel="noopener noreferrer">
-                <span class="btn-icon">📺</span>
-                TV Installer (APK)
-            </a>
-            <a href="https://parkspacer.com/songhub/phone.apk" class="cta-btn btn-secondary" target="_blank"
-                rel="noopener noreferrer">
-                <span class="btn-icon">📱</span>
-                Phone Remote App
-            </a>
-            <a href="https://songhub-activation.pages.dev/" class="cta-btn btn-secondary" target="_blank"
-                rel="noopener noreferrer">
-                <span class="btn-icon">🔑</span>
-                Get Activation Key
-            </a>
-        </div>
-
         <div class="sponsors-section">
-            <h3>Support & Sponsors</h3>
+            <h3 data-i18n="sponsorsTitle">Support my application</h3>
             <div class="sponsor-items">
+                <div class="sponsor-item">
+                    <span class="sponsor-icon">
+                        <img src="https://parkspacer.com/songhub/ktg-py-icon120x.png" alt="CardSense" width="50"
+                            height="50" onerror="this.style.display='none'">
+                    </span>
+                    <span data-i18n="sponsorApp"><strong>In Prototype</strong></span>
+                    <a href="https://kpg-tap-py.vercel.app/" target="_blank" rel="noopener noreferrer">Karaoke
+                        Tap Tap</a>
+
+                </div>
+
                 <div class="sponsor-item">
                     <span class="sponsor-icon">
                         <img src="https://parkspacer.com/cardsense/cardsense2.png" alt="CardSense" width="50"
                             height="50" onerror="this.style.display='none'">
                     </span>
-                    <span><strong>Sponsor App</strong></span>
+                    <span data-i18n="sponsorApp"><strong>CardSense App</strong></span>
                     <a href="https://play.google.com/store/apps/details?id=com.cardsense.mejia" target="_blank"
-                        rel="noopener noreferrer">CardSense on Google Play</a>
+                        rel="noopener noreferrer">Available on Google Play</a>
+
                 </div>
-                <div class="sponsor-item">
-                    <span class="sponsor-icon">💙</span>
-                    <span><strong>GCash Donation Tip</strong></span>
-                    <strong
-                        style="margin-top: 0.25rem; font-size: 1.1rem; color: var(--primary);">+639972507164</strong>
+
+            </div>
+
+            <div class="app-screenshots">
+                <img src="https://parkspacer.com/cardsense/ss1.png" class="screenshot-img" alt="CardSense 1"
+                    loading="lazy">
+                <img src="https://parkspacer.com/cardsense/ss2.png" class="screenshot-img" alt="CardSense 2"
+                    loading="lazy">
+                <img src="https://parkspacer.com/cardsense/ss3.png" class="screenshot-img" alt="CardSense 3"
+                    loading="lazy">
+                <img src="https://parkspacer.com/cardsense/ss4.png" class="screenshot-img" alt="CardSense 4"
+                    loading="lazy">
+                <img src="https://parkspacer.com/cardsense/ss5.png" class="screenshot-img" alt="CardSense 5"
+                    loading="lazy">
+            </div>
+
+            <br />
+
+
+        </div>
+
+        <h2 class="cta-title" data-i18n="quickLinks">Quick Links</h2>
+        <div class="cta-section">
+            <a href="https://parkspacer.com/songhub/app.apk" class="cta-btn btn-primary" target="_blank"
+                rel="noopener noreferrer">
+                <span data-i18n="btnTvApk"><span class="btn-icon">📺</span>&nbsp;TV Installer (APK)</span>
+            </a>
+            <a href="https://parkspacer.com/songhub/phone.apk" class="cta-btn btn-secondary" target="_blank"
+                rel="noopener noreferrer">
+                <span data-i18n="btnPhoneApp"><span class="btn-icon">📱</span>&nbsp;Phone Remote App</span>
+            </a>
+            <a href="https://songhub-activation.pages.dev/" class="cta-btn btn-secondary" target="_blank"
+                rel="noopener noreferrer">
+                <span data-i18n="btnActivation"><span class="btn-icon">🔑</span>&nbsp;Get Activation Key</span>
+            </a>
+            <a href="https://github.com/jpdcs/SongHub-Karaoke-PC/releases/tag/1.14" class="cta-btn btn-secondary"
+                target="_blank" rel="noopener noreferrer">
+                <span data-i18n="btnActivation"><span class="btn-icon">🖥️</span>&nbsp;Windows PC Installer</span>
+            </a>
+        </div>
+
+
+        <div class="faq-section">
+            <h3 data-i18n="faqTitle">Frequently Asked Questions</h3>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq1_q">1. Paano sumali sa community at channels?</summary>
+                    <div class="faq-content" data-i18n="faq1_a">
+                        <strong>Sumali sa Official Community & Channels</strong><br>
+                        Para sa mga updates, tanong, at suporta, bisitahin at i-follow ang ating mga opisyal na links:
+                        <ul>
+                            <li>👥 <strong>Official FB Group:</strong> Sumali sa <a
+                                    href="https://www.facebook.com/share/g/1FLB5DF8Ym/" class="inline-link"
+                                    target="_blank" rel="noopener noreferrer">SongHub Karaoke</a></li>
+                            <li>📄 <strong>Official FB Page:</strong> I-follow ang <a
+                                    href="https://www.facebook.com/share/1CSrwU5bxy/" class="inline-link"
+                                    target="_blank" rel="noopener noreferrer">Songhub</a></li>
+                            <li>👨‍💻 <strong>Main Developer:</strong> I-follow si <a
+                                    href="https://www.facebook.com/share/19mKyWWSXV/" class="inline-link"
+                                    target="_blank" rel="noopener noreferrer">Jipe Spd</a></li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq2_q">2. Paano makakuha ng latest songs?</summary>
+                    <div class="faq-content" data-i18n="faq2_a">
+                        Pumunta lamang sa <strong>Home screen</strong> &gt; <strong>Settings</strong> &gt; <strong>User
+                            Content</strong> &gt; <strong>Download Prebuilt Contents</strong>.
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq3_q">3. Gamit ang Phone remote app, paano maka connect?</summary>
+                    <div class="faq-content" data-i18n="faq3_a">
+                        Pumunta sa <strong>Home screen</strong> &gt; <strong>Settings</strong> &gt; <strong>Remote
+                            Broadcasting</strong> &gt; <strong>Enable Remote Server</strong>.
+                        <br><br>
+                        Make sure you are in the same router network. Copy the IP address (ex. <code>192.168.x.x</code>)
+                        to the <strong>Phone remote app</strong> then tap <strong>Connect</strong>.
+                        <br><br>
+                        <em>Take note: When using it, always connect and confirm on the TV that you are inside the page
+                            of <strong>Enter Karaoke</strong>.</em>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq4_q">4. If meron nakitang issues or bugs, what should i do?</summary>
+                    <div class="faq-content" data-i18n="faq4_a">
+                        Please report it to our <a href="https://github.com/jpdcs/SongHub-Android/issues"
+                            class="inline-link" target="_blank" rel="noopener noreferrer">GitHub Repository Issues</a>.
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq5_q">5. Pano po sa WebOS LG, Tizen TV na walang Google Play Store?</summary>
+                    <div class="faq-content" data-i18n="faq5_a">
+                        Wala pa pong support para dito, sana i-sali ako para magawan ng version.
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq6_q">6. Bakit nawala yung connection ng remote sa TV at kapag nagrereserve ng
+                        kanta di nakakapasok?</summary>
+                    <div class="faq-content" data-i18n="faq6_a">
+                        Need po nito dapat sa TV nasa page kayo ng `Enter Karaoke` page. Then connect na kayo gamit yung
+                        remote broadcast IP ng TV/Android device.
+
+                        <em>Take note: Make sure po makikita nyo sa Enter Karaoke page na meron naka connect na mobile 1
+                            or more wag lang zero (0).</em>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq7_q">7. Kapag hiningan ka ng bayad or donation?</summary>
+                    <div class="faq-content" data-i18n="faq7_a">
+                        Red flag na yan, mukang fake ang nainstall mo na binary package. Matakot ka na if nangyari yan.
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq8_q">8. Same connection sa network, hindi makaconnect yung phone sa TV para
+                        makareserve, play songs & etc.., If PLDT ka WIFI 6 ito?</summary>
+                    <div class="faq-content" data-i18n="faq8_a">
+                        Login ka sa router mo &gt; WLAN &gt; Uncheck AP Isolation. Restart router.<br><br>
+                        <a href="https://parkspacer.com/songhub/PLDT_AP_isolation.png" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="https://parkspacer.com/songhub/PLDT_AP_isolation.png" alt="PLDT AP Isolation"
+                                style="max-width: 100%; border-radius: 8px; margin-top: 8px; border: 1px solid rgba(255,255,255,0.15); display: block;">
+                        </a>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq9_q">9. Directory not found. Please check if the SongHub folder is exist
+                        Internal Storage, SD Card or USB drive?</summary>
+                    <div class="faq-content" data-i18n="faq9_a">
+                        Pumunta sa <strong>Settings</strong> &gt; <strong>User content</strong> &gt; <strong>DL Prebuilt
+                            contents</strong>.<br><br>
+                        <a href="https://parkspacer.com/songhub/directory_issue.png" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="https://parkspacer.com/songhub/directory_issue.png"
+                                alt="Directory not found issue"
+                                style="max-width: 100%; border-radius: 8px; margin-top: 8px; border: 1px solid rgba(255,255,255,0.15); display: block;">
+                        </a>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary data-i18n="faq10_q">10. Serial limit reach / Serial generation limit reached?</summary>
+                    <div class="faq-content" data-i18n="faq10_a">
+                        Subukang kumonekta sa ibang data network o gumamit ng VPN.<br><br>
+                        <em>Note: Para sa bawat device, may maximum limit na 3 beses lamang makakapag-generate ng serial
+                            activation.</em><br><br>
+                        <a href="https://parkspacer.com/songhub/serial_limit_reach.png" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="https://parkspacer.com/songhub/serial_limit_reach.png" alt="Serial limit reach"
+                                style="max-width: 100%; border-radius: 8px; margin-top: 8px; border: 1px solid rgba(255,255,255,0.15); display: block;">
+                        </a>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+        <div class="footer-views">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <div class="live-counter">
+                    <span class="pulse-dot"></span>
+                    <span id="active-users-count">0</span>&nbsp;Active (24h)
+                </div>
+
+                <div class="like-button" id="like-btn">
+                    <span class="like-emoji">❤️</span>
+                    <span id="like-count">0</span>
+                </div>
+
+                <div class="visitor-counter">
+                    <span><img src="https://visitor-badge.laobi.icu/badge?page_id=parkspacer.songhub"
+                            alt="Total Views"></span>
                 </div>
             </div>
         </div>
     </div>
 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+        import { getDatabase, ref, set, query, orderByChild, startAt, onValue, increment, update } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAgILvtCoREt8NDxq8IedNvEcPYobF4vEw",
+            authDomain: "songhub-98649.firebaseapp.com",
+            databaseURL: "https://songhub-98649-default-rtdb.firebaseio.com",
+            projectId: "songhub-98649",
+            storageBucket: "songhub-98649.firebasestorage.app",
+            messagingSenderId: "265007427004",
+            appId: "1:265007427004:web:13a8c84c1bfc2fde788fb9",
+            measurementId: "G-QZC95VCYM2"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Track CTA Clicks
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const link = e.currentTarget.href;
+                let eventName = 'click_cta';
+
+                if (link.includes('app.apk')) {
+                    eventName = 'download_tv_installer';
+                } else if (link.includes('phone.apk')) {
+                    eventName = 'download_phone_remote';
+                } else if (link.includes('songhub-activation')) {
+                    eventName = 'click_get_activation_key';
+                }
+
+                logEvent(analytics, eventName, { link_url: link });
+            });
+        });
+
+        // --- Track Active Users (Last 24 Hours) ---
+        const db = getDatabase(app);
+
+        // 1. Identify the user persistently using localStorage
+        let userId = localStorage.getItem('songhub_uid');
+        if (!userId) {
+            userId = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now();
+            localStorage.setItem('songhub_uid', userId);
+        }
+
+        // 2. Update their last active timestamp
+        const myUserRef = ref(db, 'daily_users/' + userId);
+        set(myUserRef, {
+            lastActive: Date.now()
+        });
+
+        // 3. Query all users who have been active in the last 24 hours
+        const twentyFourHoursAgo = Date.now() - (24 * 60 * 60 * 1000);
+        const recentUsersQuery = query(
+            ref(db, 'daily_users'),
+            orderByChild('lastActive'),
+            startAt(twentyFourHoursAgo)
+        );
+
+        const activeUsersCountEl = document.getElementById('active-users-count');
+        onValue(recentUsersQuery, (snapshot) => {
+            if (snapshot.exists()) {
+                const totalUsers = Object.keys(snapshot.val()).length;
+                activeUsersCountEl.innerText = totalUsers;
+            } else {
+                activeUsersCountEl.innerText = '0';
+            }
+        });
+
+        // --- Like Button Logic ---
+        const likeBtn = document.getElementById('like-btn');
+        const likeCountEl = document.getElementById('like-count');
+        const likesRef = ref(db, 'total_likes');
+
+        // Check if already liked
+        if (localStorage.getItem('songhub_liked')) {
+            likeBtn.classList.add('liked');
+            likeBtn.title = "You already liked this!";
+        }
+
+        // Listen for global likes count
+        onValue(likesRef, (snapshot) => {
+            if (snapshot.exists()) {
+                likeCountEl.innerText = snapshot.val();
+            } else {
+                likeCountEl.innerText = '0';
+            }
+        });
+
+        // Handle Like Click
+        likeBtn.addEventListener('click', () => {
+            if (!localStorage.getItem('songhub_liked')) {
+                localStorage.setItem('songhub_liked', 'true');
+                likeBtn.classList.add('liked');
+                likeBtn.title = "You already liked this!";
+                // Increment in database
+                set(likesRef, increment(1));
+            }
+        });
+
+    </script>
+
+    <script src="i18n.js"></script>
 </body>
 
 </html>
