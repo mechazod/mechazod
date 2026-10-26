@@ -13,13 +13,14 @@ Learning now AI one step at a time
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mechazod&layout=compact&title_color=19F9D8&icon_color=19F9D8&bg_color=002B36&text_color=FFFFFF)
 
-### Indie Games
+### Indie Apps & Games
 
-Will be availble in Google Playstore
+- 💳 CardSense
+    -> [Download](https://play.google.com/store/apps/details?id=com.cardsense.mejia) at Google Play
+- 🎤 Karaoke Tap Tap
+    -> [Play on Web](https://kpg-tap-py.vercel.app/)
 
-- 💠 Tile Breaker
-    -> [Download](https://play.google.com/store/apps/details?id=com.tilebreaker.game) at Google Play
-- 🧠 Memory Duel
-    -> Be a [tester](https://play.google.com/apps/testing/com.memoryduel.game) at Google Play
-- 💗 Tong-its
-    -> Be a [tester](https://play.google.com/apps/testing/com.tongits.game) at Google Play
+
+### Learning Web3
+
+![BIP39](http://parkspacer.com/bip39_eth.gif)
