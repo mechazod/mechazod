@@ -448,6 +448,91 @@
       box-shadow: 0 36px 90px rgba(204, 31, 31, 0.2), 0 0 0 2px var(--red);
     }
 
+    /* ── PAYOFF BANNER ── */
+    .payoff-banner-section {
+      padding: 0 40px;
+      margin: -24px auto 36px;
+      max-width: 1160px;
+    }
+
+    .payoff-banner {
+      background: linear-gradient(135deg, #FFF5F5 0%, #FFFFFF 60%, #EFF6FF 100%);
+      border: 1px solid #FECACA;
+      border-radius: 20px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 4px 20px rgba(204, 31, 31, 0.05);
+    }
+
+    @media (max-width: 860px) {
+      .payoff-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .payoff-banner-section {
+        padding: 0 20px;
+        margin: -10px auto 30px;
+      }
+    }
+
+    .payoff-banner-content {
+      flex: 1;
+    }
+
+    .payoff-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FEE2E2;
+      color: var(--red);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .payoff-banner-title {
+      font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+      font-weight: 900;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .payoff-banner-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .payoff-banner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 12px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .payoff-banner-btn:hover {
+      background: var(--red-light);
+      transform: translateY(-2px);
+    }
+
     /* ── SCREENSHOTS STRIP (Play Store style) ── */
     .screenshots-section {
       background: white;
@@ -1189,6 +1274,24 @@
     </div>
   </section>
 
+  <!-- ── NEW FEATURE HIGHLIGHT: PAYOFF JOURNEY ── -->
+  <section class="payoff-banner-section reveal">
+    <div class="payoff-banner">
+      <div class="payoff-banner-content">
+        <span class="payoff-badge">📉 Major Update</span>
+        <div class="payoff-banner-title">Introducing Payoff Journey — Stop the 3% Monthly Interest Trap</div>
+        <p class="payoff-banner-desc">
+          Sequencing all your Philippine credit cards with Avalanche & Snowball strategies, and a built-in offline
+          Payoff Advisor. Plus, newly expanded plan limits: Free now supports
+          up to <strong>5 cards</strong> and Basic up to <strong>10 cards</strong>!
+        </p>
+      </div>
+      <a href="https://parkspacer.com/cardsense/payoff-journey/index.html" class="payoff-banner-btn">
+        Explore Payoff Journey →
+      </a>
+    </div>
+  </section>
+
   <!-- ── SCREENSHOTS STRIP ── -->
   <section class="screenshots-section">
     <div class="screenshots-header reveal">
@@ -1336,7 +1439,8 @@
         <div class="price-card-price">₱0<span>/forever</span></div>
         <div class="price-card-sub">No subscription needed. Get started right away.</div>
         <ul class="price-feat-list">
-          <li>Manage 1 credit card</li>
+          <li>Manage up to 5 credit cards</li>
+          <li>Payoff Journey &amp; debt sequencing</li>
           <li>Standard flat card design</li>
           <li>Transactions, SOA import &amp; dashboard</li>
         </ul>
@@ -1357,7 +1461,8 @@
         </div>
 
         <ul class="price-feat-list">
-          <li>Manage up to 4 credit cards</li>
+          <li>Manage up to 10 credit cards</li>
+          <li>Payoff Journey &amp; debt sequencing</li>
           <li>Standard flat card designs</li>
           <li>Transactions, SOA import &amp; dashboard</li>
           <li>Due date &amp; annual fee reminders</li>
@@ -1397,6 +1502,7 @@
 
         <ul class="price-feat-list">
           <li>Unlimited cards, no cap</li>
+          <li>Payoff Journey &amp; debt sequencing</li>
           <li>Nearby deals on your dashboard</li>
           <li>Animated 3D premium card designs</li>
         </ul>
@@ -1476,6 +1582,7 @@
         Conditions</a></span>
     <span class="footer-copy"><a href="https://parkspacer.com/cardsense/privacy/">Privacy &amp; Security</a></span>
     <span class="footer-copy"><a href="https://parkspacer.com/cardsense/faq/">FAQ</a></span>
+    <span class="footer-copy"><a href="https://parkspacer.com/cardsense/payoff-journey/">Payoff Journey</a></span>
     <span class="footer-copy"><a href="https://parkspacer.com/cardsense/how-it-works/">How It Works</a></span>
     <span class="footer-copy"><a href="https://parkspacer.com/cardsense/philippine-credit-card-tracker/">Philippine
         Tracker</a></span>

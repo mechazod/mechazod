@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoff Journey — CardSense | Break Free from Credit Card Interest</title>
+  <meta name="title" content="Payoff Journey — CardSense | Break Free from Credit Card Interest" />
+  <meta name="description"
+    content="Discover CardSense Payoff Journey: sequencing credit card payments with Avalanche or Snowball, on-device offline OCR screenshot autofill, and a smart offline Payoff Advisor." />
+  <meta name="theme-color" content="#CC1F1F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --red: #CC1F1F;
+      --red-light: #E53535;
+      --red-bg: #FFF0F0;
+      --red-border: rgba(204, 31, 31, 0.16);
+      --white: #FFFFFF;
+      --off: #FAF8F7;
+      --ink: #1C1010;
+      --muted: #7A5555;
+      --blue: #2563EB;
+      --blue-bg: #EFF6FF;
+      --blue-border: #DBEAFE;
+      --green: #16A34A;
+      --green-bg: #DCFCE7;
+      --card-border: #E2E8F0;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: var(--off);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 40px;
+      background: rgba(250, 248, 247, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--red-border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-brand span {
+      color: var(--red);
+    }
+
+    .nav-cta {
+      background: var(--red);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--red-light);
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 60px auto 40px;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FEE2E2;
+      color: var(--red);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .hero-lead {
+      font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+      color: var(--muted);
+      margin-bottom: 32px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn-main {
+      background: var(--red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.15s, background 0.15s;
+    }
+
+    .btn-main:hover {
+      background: var(--red-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: #fff;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid var(--card-border);
+      transition: background 0.15s;
+    }
+
+    .btn-ghost:hover {
+      background: #f8fafc;
+    }
+
+    .problem-callout {
+      background: #fff;
+      border: 1px solid #FECACA;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 800px;
+      margin: 0 auto 60px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .problem-callout h3 {
+      color: var(--red);
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .problem-callout p {
+      color: var(--ink);
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+    }
+
+    .feat-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .feat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .feat-icon.blue {
+      background: var(--blue-bg);
+      color: var(--blue);
+    }
+
+    .feat-icon.red {
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .feat-icon.green {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+
+    .feat-card h4 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .feat-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .strategy-compare {
+      max-width: 860px;
+      margin: 0 auto 70px;
+      padding: 0 24px;
+    }
+
+    .strategy-compare h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 30px;
+      letter-spacing: -0.02em;
+    }
+
+    .compare-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 650px) {
+      .compare-boxes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .strat-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 2px solid transparent;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .strat-box.avalanche {
+      border-color: var(--blue);
+    }
+
+    .strat-box.snowball {
+      border-color: #E2E8F0;
+    }
+
+    .strat-box h5 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .strat-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .strat-box.avalanche .strat-tag {
+      background: var(--blue-bg);
+      color: var(--blue);
+    }
+
+    .strat-box.snowball .strat-tag {
+      background: #F1F5F9;
+      color: #475569;
+    }
+
+    .strat-box p {
+      font-size: 0.95rem;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 0 auto 70px;
+      padding: 0 24px;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 32px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+
+    .faq-item h5 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .bottom-cta {
+      background: linear-gradient(135deg, #FFF0F0 0%, #FFFFFF 100%);
+      border: 1px solid var(--red-border);
+      border-radius: 24px;
+      max-width: 860px;
+      margin: 0 auto 60px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .bottom-cta h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .bottom-cta p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      border-top: 1px solid var(--red-border);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: var(--red);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      object-fit: cover;
+    }
+  </style>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZ5HBFQC5X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BZ5HBFQC5X');
+  </script>
+</head>
+
+<body>
+  <nav>
+    <a class="nav-brand" href="#">
+      <img src="https://parkspacer.com/cardsense/cardsense2.png" alt="CardSense" onerror="this.style.display='none'">
+      CardSense
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.cardsense.mejia" target="_blank" rel="noopener"
+      class="nav-cta">Download Free</a>
+
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">✨ New Feature Update</div>
+    <h1>Stop Paying Just the Minimum.<br>Start Your <span>Payoff Journey</span>.</h1>
+    <p class="hero-lead">
+      Philippine credit cards charge ~3.0% interest monthly. Paying only the minimum turns a ₱25k balance into a 10-year
+      debt trap. Payoff Journey mathematically sequences your payments so you become debt-free months ahead of schedule.
+    </p>
+    <div class="hero-btns">
+      <a href="https://play.google.com/store/apps/details?id=com.cardsense.mejia" target="_blank" rel="noopener"
+        class="btn-main">Get CardSense on Google Play</a>
+      <a href="../#pricing" class="btn-ghost">View Updated Plan Limits</a>
+    </div>
+  </div>
+
+  <div class="problem-callout">
+    <h3>⚠️ The "Minimum Due" Trap</h3>
+    <p>
+      On a ₱25,000 balance at 3% monthly interest (36% p.a.), an ₱800 minimum payment pays ₱750 in interest and only ₱50
+      toward your actual balance. You could be paying for a decade without denting what you owe.
+    </p>
+    <p>
+      <strong>Payoff Journey changes this:</strong> It analyzes all your Philippine cards as one unified debt,
+      safeguards every card against penalty fees, and directs extra funds where they do the most damage.
+    </p>
+  </div>
+
+  <div class="strategy-compare">
+    <h2>Two Proven Strategies. Instant Math.</h2>
+    <div class="compare-boxes">
+      <div class="strat-box avalanche">
+        <h5>⚡ Avalanche Method</h5>
+        <div class="strat-tag">Mathematically Optimal</div>
+        <p><strong>Highest interest rate card first.</strong></p>
+        <p>Pay minimums on all other cards to avoid penalties, and throw all excess budget at your highest APR balance.
+        </p>
+        <p><em>Saves the absolute most money in total interest charges.</em></p>
+      </div>
+      <div class="strat-box snowball">
+        <h5>⛄ Snowball Method</h5>
+        <div class="strat-tag">Psychological Momentum</div>
+        <p><strong>Smallest balance card first.</strong></p>
+        <p>Pay minimums on everything else and knock out your smallest balances one by one for fast momentum.</p>
+        <p><em>Clears individual cards sooner to give you immediate breathing room.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon green">📸</div>
+      <h4>Offline Screenshot Autofill</h4>
+      <p>Hate typing card numbers or balances? Just snap a screenshot of your bank app or SOA overview. CardSense's
+        on-device OCR extracts the bank, balance, minimum due, and due date completely offline.</p>
+    </div>
+
+    <div class="feat-card">
+      <div class="feat-icon blue">💬</div>
+      <h4>Offline Payoff Advisor</h4>
+      <p>Ask in plain English or Taglish: <em>"When will I be debt-free?"</em> or <em>"What if I add ₱2,000 this
+          month?"</em>. You get instant, precise math without cloud latency or third-party tracking.</p>
+    </div>
+
+    <div class="feat-card">
+      <div class="feat-icon red">🔔</div>
+      <h4>Dedicated Due Reminders</h4>
+      <p>Receive proactive notifications prefixed with <code>[Payoff Journey]</code> showing target allocations and
+        reminders before each billing cycle closes.</p>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h5>Does CardSense need my bank login or full 16-digit card number?</h5>
+      <p>Never. CardSense never asks for bank passwords, OTPs, or 16-digit card numbers. You only use familiar nicknames
+        (e.g., "BPI Gold", "Security Bank Wave") and balances.</p>
+    </div>
+    <div class="faq-item">
+      <h5>Is my card data uploaded to a cloud server?</h5>
+      <p>No. All Payoff Journey calculations, OCR screenshot analysis, and balance records are processed and stored 100%
+        locally on your phone.</p>
+    </div>
+    <div class="faq-item">
+      <h5>How many cards can I manage in Payoff Journey?</h5>
+      <p>With our newly expanded plan limits, Free users can track up to <strong>5 cards</strong>, Basic users up to
+        <strong>10 cards</strong>, and Premium users enjoy unlimited cards.
+      </p>
+    </div>
+  </div>
+
+  <div class="bottom-cta">
+    <h2>Take control of your cards today</h2>
+    <p>Join thousands of Filipino cardholders who track their statements, avoid interest traps, and pay off debt faster.
+    </p>
+    <a href="https://play.google.com/store/apps/details?id=com.cardsense.mejia" target="_blank" rel="noopener"
+      class="btn-main">Install CardSense Free</a>
+  </div>
+
+  <footer>
+    <a href="https://parkspacer.com/cardsense/index.html">Home</a>
+    <a href="https://parkspacer.com/cardsense/how-it-works/">How It Works</a>
+    <a href="https://parkspacer.com/cardsense/privacy-policy.html">Privacy Policy</a>
+    <a href="https://parkspacer.com/cardsense/terms_and_conditions.html">Terms & Conditions</a>
+    <p style="margin-top: 14px;">© 2026 CardSense. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
